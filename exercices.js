@@ -14,7 +14,9 @@ console.log(potions_type);
 potions_type.pop();
 console.log(potions_type);
 const health_potion = { name: 'potion de vie', price: 50, stock: 100 };
+console.log(health_potion);
 console.log(health_potion.name);
+console.log(health_potion['price']);
 
 
 if (store_status) {
