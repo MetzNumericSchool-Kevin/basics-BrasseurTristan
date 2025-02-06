@@ -2,11 +2,14 @@ const nom_sorcier = prompt("Comment te nommes-tu, sorcier ? 🧙‍♂️");
 alert("Le sorcier se nomme :" + nom_sorcier + " ! 🎉");
 
 const store_name = 'À la poche pleine !';
+let potions_type = ['potion de vie', 'potion de mana', 'potion de vigueur'];
+console.log(potions_type);
 let potions_stock = 99; // Je suis prévoyant !
 let potion_price = 50;
 let store_status = true;
 const money = '🪙';
 let wallet = 200;
+
 
 if (store_status) {
     let choice;
@@ -34,8 +37,8 @@ if (store_status) {
                 } else {
                     alert(` Désolé aventurier mais c'est pas possible `)
                 }
-
                 break;
+
             default:
                 alert(`Mh... Désolé aventurier, je ne comprends pas ce que tu souhaites. Refais ton choix ! 😕`);
                 break;
