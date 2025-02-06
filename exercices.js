@@ -7,7 +7,7 @@ let store_status = true;
 const money = '🪙';
 let wallet = 200;
 const store_name = 'À la poche pleine !';
-let potions_type = ['potion de vie', 'potion de mana', 'potion de vigueur'];
+let potions_type = ['potion de vie', 'potion de mana', 'potion d\'endurance'];
 console.log(potions_type);
 potions_type.push('potion de force');
 console.log(potions_type);
@@ -17,6 +17,10 @@ const health_potion = { name: 'potion de vie', price: 50, stock: 100 };
 console.log(health_potion);
 console.log(health_potion.name);
 console.log(health_potion['price']);
+const inventory = [{ name: 'potion de vie', price: 40, stock: 1 },
+{ name: 'potion de mana', price: 20, stock: 2 },
+{ name: 'potion d\endurance', price: 20, stock: 1 }
+]
 
 
 if (store_status) {
@@ -47,11 +51,22 @@ if (store_status) {
                 }
                 break;
             case 5:
+                // Boucle avec le tableau 
+                // let msg = "J'ai actuellement :\n";
+                // potions_type.forEach(potion => {
+                //     msg += "- " + potion + "\n"
+                // });
+                // alert(msg);
+                // Boucle avec les objets
                 let msg = "J'ai actuellement :\n";
-                potions_type.forEach(potion => {
-                    msg += "- " + potion + "\n"
-                });
-                alert(msg);
+                inventory.forEach(potion => {
+
+                    for (const key in potion) {
+                        msg += key + " = " + potion[key] + " | ";
+                    }
+                    msg += "\n"
+                })
+                alert(msg)
                 break;
 
             default:
