@@ -1,6 +1,11 @@
 const nom_sorcier = prompt("Comment te nommes-tu, sorcier ? 🧙‍♂️");
 alert("Le sorcier se nomme :" + nom_sorcier + " ! 🎉");
 
+let potions_stock = 99; // Je suis prévoyant !
+let potion_price = 50;
+let store_status = true;
+const money = '🪙';
+let wallet = 200;
 const store_name = 'À la poche pleine !';
 let potions_type = ['potion de vie', 'potion de mana', 'potion de vigueur'];
 console.log(potions_type);
@@ -8,11 +13,8 @@ potions_type.push('potion de force');
 console.log(potions_type);
 potions_type.pop();
 console.log(potions_type);
-let potions_stock = 99; // Je suis prévoyant !
-let potion_price = 50;
-let store_status = true;
-const money = '🪙';
-let wallet = 200;
+const health_potion = { name: 'potion de vie', price: 50, stock: 100 };
+console.log(health_potion.name);
 
 
 if (store_status) {
