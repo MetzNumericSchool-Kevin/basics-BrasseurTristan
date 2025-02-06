@@ -4,6 +4,10 @@ alert("Le sorcier se nomme :" + nom_sorcier + " ! 🎉");
 const store_name = 'À la poche pleine !';
 let potions_type = ['potion de vie', 'potion de mana', 'potion de vigueur'];
 console.log(potions_type);
+potions_type.push('potion de force');
+console.log(potions_type);
+potions_type.pop();
+console.log(potions_type);
 let potions_stock = 99; // Je suis prévoyant !
 let potion_price = 50;
 let store_status = true;
@@ -14,7 +18,7 @@ let wallet = 200;
 if (store_status) {
     let choice;
     while (choice != 0) {
-        choice = parseInt(prompt(`Bienvenue dans la boutique ${store_name} Aventurier ! 🎉 \nQue veux-tu savoir ? 🤔 \n1. Le nom de la boutique \n2. Le nom du Sorcier \n3. Le prix d'une potion de soin \n4. La quantité de potion de soin que tu souhaites \n5. La liste de mes potions \n0. Quitter le magasin`));
+        choice = parseInt(prompt(`Bienvenue dans la boutique ${store_name} Aventurier ! 🎉 \nQue veux-tu savoir ? 🤔 \n1. Le nom de la boutique \n2. Le nom du Sorcier \n3. Le prix d'une potion de soin \n4. La quantité de potion de soin que tu souhaites \n5. La liste de mes potions \n0. Quitter la boutique`));
         switch (choice) {
             case 0:
                 alert(`Merci d'être venu aventurier, à la revoyure !`)
@@ -41,10 +45,11 @@ if (store_status) {
             case 5:
                 let msg = "J'ai actuellement :\n";
                 potions_type.forEach(potion => {
-                    msg += potion + "\n"
+                    msg += "- " + potion + "\n"
                 });
                 alert(msg);
                 break;
+
             default:
                 alert(`Mh... Désolé aventurier, je ne comprends pas ce que tu souhaites. Refais ton choix ! 😕`);
                 break;
